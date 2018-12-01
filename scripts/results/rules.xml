@@ -1,0 +1,60 @@
+<rules>
+    <!-- filename rules for computing MSE -->
+        
+    <technique name="GPM">
+        <prefix name="recons" out="" />
+        <prefix name="L1" out="L1" />
+        <prefix name="L2" out="L2" />
+        <prefix name="Uni" out="Uni" />
+    </technique>
+    
+    <technique name="GBDPT">
+        <prefix name="recons" out="" />
+        <prefix name="L1" out="L1" />
+        <prefix name="L2" out="L2" />
+        <prefix name="Uni" out="Uni" />
+    </technique>
+    <technique name="GPT">
+        <prefix name="recons_nfor" out="nfor" />
+        <prefix name="recons_nfor_custom" out="nfor_custom" />
+        <prefix name="Uni_nfor" out="Uni_nfor" />
+        <prefix name="Uni_nfor_custom" out="Uni_nfor_custom" />
+        <prefix name="Weighted_nfor" out="Weighted_nfor" />
+        <prefix name="Weighted_nfor_custom" out="Weighted_nfor_custom" />
+        <prefix name="recons" out="" />
+        <prefix name="L1" out="L1" />
+        <prefix name="L2" out="L2" />
+        <prefix name="Uni" out="Uni" />
+        <prefix name="Weighted" out="Weighted" />
+        <prefix name="L2Weighted" out="L2Weighted" />
+    </technique>
+    <technique name="GVCM">
+        <prefix name="recons" out="" />
+        <prefix name="L1" out="L1" />
+        <prefix name="L2" out="L2" />
+        <prefix name="Uni" out="Uni" />
+    </technique>
+
+    <technique name="SPPM">
+        <prefix name="pass" out="" />
+    </technique>
+    <technique name="PT">
+        <prefix name="pass" out="" />
+        <prefix name="nfor_recons" out="nfor" />
+    </technique>
+    <technique name="BDPT">
+        <prefix name="pass" out="" />
+    </technique>
+    <technique name="VCM">
+        <prefix name="pass" out="" />
+    </technique>
+
+    <technique name="BCD">
+        <prefix name="recons" out="" />
+    </technique>
+    <technique name="NFOR">
+        <prefix name="recons" out="" />
+    </technique>
+
+    
+</rules>

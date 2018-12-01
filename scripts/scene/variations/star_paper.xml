@@ -1,0 +1,41 @@
+<Test>
+    <SelectedTechniques>
+      <!-- The gradient approaches -->
+      <!--
+      <Selected name="G-VPM_L2_areaMIS_null" />
+      <Selected name="G-BRE_L2_areaMIS_null" />
+      <Selected name="G-Beam_L2_areaMIS_null" />
+      <Selected name="G-BDPT_L2" />
+      <Selected name="G-PT_L2" />
+      -->
+
+      <!--<Selected name="GPT_L2_PathReuse" />
+      <Selected name="GPT_Weighted_PathReuse" />
+      <Selected name="GPT_Weighted" />-->
+
+      <!-- L2 for debugging -->
+      <Selected name="GPM_L1" />
+      <Selected name="GBDPT_L1" />
+      <Selected name="GPT_L1" />
+      <Selected name="GVCM_L1" />
+
+      <!--<Selected name="GPM_L2" />
+      <Selected name="GBDPT_L2" />
+      <Selected name="GPT_L2" />
+      <Selected name="GVCM_L2" />-->
+
+        <!-- The non-gradient approaches -->
+      <Selected name="SPPM" />
+      <Selected name="VCM" />
+      <Selected name="BDPT" />
+      <Selected name="PT" />
+
+      <!--<Selected name="BCD" />
+      <Selected name="NFOR" />-->
+
+    </SelectedTechniques>
+    <Changes>
+    </Changes>
+    <DeletedTechniques>
+    </DeletedTechniques>
+</Test>

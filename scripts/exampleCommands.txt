@@ -1,0 +1,13 @@
+% Generates scenes
+
+% Commands run the computations
+python run_batch.py -m /home/beltegeuse/projects/GradientPM/gradient_pm_code/build/release/binaries/mitsuba -A -s 3600 -i /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/cbox -o /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/out3600/ -j 12 -A
+
+% Commands run the packing (images)
+python run_pack.py -i /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/out3600/ -o /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/res3600/ -A -s 5 -f 0:10:0 -f 0:30:0 -f 1:0:0 -r /home/beltegeuse/projects/GradientPM/data/references/ref_cbox.hdr -n pass -n "" -n dxAbs -n dyAbs -n L1 -n L2 -n throughput
+
+% Commands to compute error metrics
+python run_mse.py -i /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/out3600/ -o /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/res3600/ -r /home/beltegeuse/projects/GradientPM/data/references/ref_cbox.hdr -s 5 -A
+
+% Commands for the HTML pages
+python run_html.py -i /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/res3600/ -o /home/beltegeuse/projects/GradientPM/data/scenes/cbox_scene/html3600/ -t 600 -c data/html_gpm.xml -e 2 -m

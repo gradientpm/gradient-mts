@@ -1,0 +1,26 @@
+<Test>
+    <SelectedTechniques>
+      <!-- The gradient approaches -->
+      <!--
+      <Selected name="G-VPM_L2_areaMIS_null" />
+      <Selected name="G-BRE_L2_areaMIS_null" />
+      <Selected name="G-Beam_L2_areaMIS_null" />
+      <Selected name="G-BDPT_L2" />
+      <Selected name="G-PT_L2" />
+      -->
+
+
+      <!-- L2 for debugging -->
+      <Selected name="GPT" />
+
+
+        <!-- The non-gradient approaches -->
+      <Selected name="BCD" />
+      <Selected name="NFOR" />
+
+    </SelectedTechniques>
+    <Changes>
+    </Changes>
+    <DeletedTechniques>
+    </DeletedTechniques>
+</Test>

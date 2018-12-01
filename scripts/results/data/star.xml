@@ -1,0 +1,73 @@
+<Config>
+    <Techniques>
+        <Technique name="Reference" filename="Ref" />
+
+        <!-- PRIMAL -->
+        <Technique name="PT" filename="PT" prefix="pass"/>
+        <Technique name="BDPT" filename="BDPT" prefix="pass"/>
+        <Technique name="VCM" filename="VCM" prefix="pass"/>
+        <Technique name="PM" filename="SPPM" prefix="pass"/>
+
+        <Technique name="G-PT" filename="GPT_L1" prefix="recons"/>
+        <Technique name="G-BDPT" filename="GBDPT_L1" prefix="recons"/>
+        <Technique name="G-VCM" filename="GVCM_L1" prefix="recons"/>
+        <Technique name="G-PM" filename="GPM_L1" prefix="recons"/>
+    </Techniques>
+    <Curves>
+        <Entries>
+            <Entry technique="PT"   color="#6a3d9aff" dashed="false" />
+            <Entry technique="BDPT" color="#ff7f00ff" dashed="false" />
+            <Entry technique="PM"  color="#33a02cff" dashed="false" />
+            <Entry technique="VCM"  color="#e31a1cff" dashed="false" />
+
+            <Entry technique="G-PT"   color="#6a3d9aff" dashed="true" />
+            <Entry technique="G-BDPT" color="#ff7f00ff" dashed="true" />
+            <Entry technique="G-PM"  color="#33a02cff" dashed="true" />
+            <Entry technique="G-VCM"  color="#e31a1cff" dashed="true" />
+        </Entries>
+
+        <Section name="relMSE">
+            <Curve csv="relMSE" ylabel="relMSE value" xlabel="Rendering time (seconds)" log="false" />
+            <Curve csv="relMSE" ylabel="log(relMSE value)" xlabel="Log(Rendering time)" log="true" />
+        </Section>
+    </Curves>
+    <Comparisons>
+        <!-- The main comparison !!!! -->
+        <Compare title="Comparison gradient-domain integrators">
+            <Element technique="G-PT" />
+            <Element technique="G-BDPT" />
+            <Element technique="G-VCM" />
+            <Element technique="G-PM" />
+        </Compare>
+        <Compare title="Comparison primal-domain integrators">
+            <Element technique="PT" />
+            <Element technique="BDPT" />
+            <Element technique="VCM" />
+            <Element technique="PM" />
+        </Compare>
+        <Compare title="Comparison between primal- and gradient- path tracing">
+            <Element technique="Reference" />
+            <Element technique="Reference" />
+            <Element technique="PT" />
+            <Element technique="G-PT" />
+        </Compare>
+        <Compare title="Comparison between primal- and gradient- BDPT">
+            <Element technique="Reference" />
+            <Element technique="Reference" />
+            <Element technique="BDPT" />
+            <Element technique="G-BDPT" />
+        </Compare>
+        <Compare title="Comparison between primal- and gradient- photon density estimtors">
+            <Element technique="Reference" />
+            <Element technique="Reference" />
+            <Element technique="PM" />
+            <Element technique="G-PM" />
+        </Compare>
+        <Compare title="Comparison between primal- and gradient- VCM/UPS">
+            <Element technique="Reference" />
+            <Element technique="Reference" />
+            <Element technique="VCM" />
+            <Element technique="G-VCM" />
+        </Compare>
+    </Comparisons>
+</Config>

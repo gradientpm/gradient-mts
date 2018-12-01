@@ -1,0 +1,40 @@
+<Test>
+    <SelectedTechniques>
+      <!-- The gradient approaches -->
+      <!--
+      <Selected name="G-VPM_L2_areaMIS_null" />
+      <Selected name="G-BRE_L2_areaMIS_null" />
+      <Selected name="G-Beam_L2_areaMIS_null" />
+      <Selected name="G-BDPT_L2" />
+      <Selected name="G-PT_L2" />
+      -->
+
+
+      <!-- L2 for debugging -->
+      <Selected name="GPM_L2" />
+      <Selected name="GBDPT_L2" />
+      <Selected name="GPT_L2" />
+      <Selected name="GVCM_L2" />
+
+      <!-- The non-gradient approaches -->
+      <!--<Selected name="VPM" />
+      <Selected name="BRE" />
+      <Selected name="Beam" />
+      <Selected name="BDPT" />
+      <Selected name="PT" /> -->
+
+    </SelectedTechniques>
+    <Changes>
+        <Change techniques="GPM_L2;GBDPT_L2;GPT_L2;GVCM_L2" suffix="all">
+            <boolean name="reconstructL2" value="true"/>
+            <boolean name="reconstructL1" value="true"/>
+            <boolean name="reconstructUni" value="true"/>
+        </Change>
+    </Changes>
+    <DeletedTechniques>
+        <Deleted name="GPM_L2" />
+        <Deleted name="GBDPT_L2" />
+        <Deleted name="GPT_L2" />
+        <Deleted name="GVCM_L2" />
+    </DeletedTechniques>
+</Test>

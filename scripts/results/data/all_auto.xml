@@ -1,0 +1,64 @@
+<Config version="0.1">
+	<Techniques automatic="true">
+		<Rule pattern="\S*GPM\S*" prefix="recons" />
+		<Rule pattern="\S*GBDPT\S*" prefix="recons" />
+		<Rule pattern="\S*GPT\S*" prefix="recons" />
+		<Rule pattern="\S*GVCM\S*" prefix="recons" />
+		<Rule pattern="\S*BDPT\S*" prefix="pass" />
+		<Rule pattern="\S*PT\S*" prefix="pass" />
+		<Rule pattern="\S*SPPM\S*" prefix="pass" />
+		<Rule pattern="\S*VCM\S*" prefix="pass" />
+		<Rule pattern="\S*BCD\S*" prefix="recons" />
+		<Rule pattern="\S*NFOR\S*" prefix="recons" />
+	</Techniques>
+	<Curves>
+	    <Entries automatic="true">
+		</Entries>
+		<Section name="relMSE">
+			<Curve csv="relMSE" ylabel="relMSE value" xlabel="Rendering time (seconds)" log="false" />
+			<Curve csv="relMSE" ylabel="log(relMSE value)" xlabel="Log(Rendering time)" log="true" />
+	      </Section>		
+		<Section name="RMSE">
+			<Curve csv="rmse" ylabel="RMSE value" xlabel="Rendering time (seconds)" log="false" />
+			<Curve csv="rmse" ylabel="log(RMSE value)" xlabel="Log(Rendering time)" log="true" />
+		</Section>
+	     
+	</Curves>
+	<Comparisons automatic="true">
+		<!-- The main comparison !!!! -->
+		<!--<Compare title="Comparison between photon mapping techniques">
+			<Element technique="Reference" />
+			<Element technique="GVPM beam L1" />
+			<Element technique="SPPM beam 3D" />
+			<Element technique="GVPM beam L2" />
+		</Compare>
+
+		<Compare title="Comparison between photon mapping techniques">
+			<Element technique="Reference" />
+			<Element technique="SPPM beam" />
+			<Element technique="SPPM beam 3D" />
+			<Element technique="SPPM beam rayDiff" />
+		</Compare>-->
+		<!-- Some other comparisons :D -->
+        <!--
+		<Compare title="Comparison with MC techniques">
+			<Element name="Reference" />
+			<Element name="SPPM" /> 
+			<Element name="PT" />
+			<Element name="BDPT" />
+		</Compare>
+		<Compare title="Previous works between MC and Gradient techniques (L1)">
+			<Element name="PT" />
+			<Element name="BDPT" />
+			<Element name="GPT_L1" /> 
+			<Element name="GBDPT_L1" />
+		</Compare>
+		<Compare title="Previous works between MC and Gradient techniques (L2)">
+			<Element name="PT" />
+			<Element name="BDPT" />
+			<Element name="GPT_L2" />
+			<Element name="GBDPT_L2" />
+		</Compare>
+        -->
+	</Comparisons>
+</Config>
