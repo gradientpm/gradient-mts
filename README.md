@@ -30,6 +30,25 @@ For image reconstruction, it includes:
 
 Currently, weighted reconstruction only supports gradient-domain path tracing. This reconstruction requires an estimate of the variance of the pixel value and its gradients. The support for other algorithms requires some extensions of this variance estimates which we temporarily leave as future work.
 
+Scenes
+------
+
+![](montage.jpg)
+
+### Surface rendering
+- [Bathroom](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/bathroom3_scene.zip)
+- [Sponza](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/sponza_scene.zip)
+- [Bookshelf](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/bookshelf_scene.zip)
+- [Torus](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/torus_scene.zip)
+- [Veach-Lamp](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/veach-lamp_scene.zip)
+
+### Volume rendering
+- [Kitchen](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/kitchen_scene.zip)
+- [Staircase](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/staircase_scene.zip)
+- [Bathroom](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/bathroom_scene.zip)
+- [Spotlight](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/spotlight_scene.zip)
+- [Glass](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/glass_scene.zip)
+
 Denoisers
 ---------
 To support the comparison of gradient-domain image reconstruction with Monte Carlo denoising techniques, the code also includes two popular denoising techniques:
